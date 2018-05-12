@@ -22,9 +22,17 @@ class AddPerson extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>Add person:</label>
-                <input type="text" value={this.state.name} placeholder="Name" onChange={this.handleChange} />
-                <input type="submit" value="Add" />
+                <div className="row">
+                    <div className="column25">
+                        <label>Add person:</label>
+                    </div>
+                    <div className="column25">
+                        <input type="text" value={this.state.name} placeholder="Name" onChange={this.handleChange} />
+                    </div>
+                    <div className="column50">
+                        <input type="submit" value="Add" />
+                    </div>
+                </div>
             </form>
         )
     }

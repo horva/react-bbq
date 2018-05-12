@@ -16,15 +16,29 @@ class Calculation extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <label>Weight per person:</label>
-                    <input type="number" value={this.state.weightPerPerson} placeholder="Name" onChange={this.handleChange} />
+                <div className="row space-bottom">
+                    <div className="column25">
+                        <label>Person count:</label>
+                    </div>
+                    <div className="column25">
+                        {this.props.personCount}
+                    </div>
                 </div>
-                <div>
-                    <label>Person count: {this.props.personCount}</label>
+                <div className="row space-bottom">
+                    <div className="column25">
+                        <label>Weight total:</label>
+                    </div>
+                    <div className="column25">
+                        {this.state.weightPerPerson * this.props.personCount}
+                    </div>
                 </div>
-                <div>
-                    <label>Weight total: {this.state.weightPerPerson * this.props.personCount}</label>
+                <div className="row space-bottom">
+                    <div className="column25">
+                        <label>Weight per person:</label>
+                    </div>
+                    <div className="column25">
+                        <input type="number" value={this.state.weightPerPerson} placeholder="Name" onChange={this.handleChange} />
+                    </div>
                 </div>
             </div>
         )
